@@ -1,0 +1,43 @@
+body {
+	background-image: url("image/css_animation_exercise_4.png");
+	background-repeat: no-repeat;
+	
+}
+
+#hero {
+	
+	position: relative;
+	width:75px;
+	height:75px;
+	border: 1px dashed red;
+	top:10px;
+	left:10px;
+	animation-duration: 5s, 2s;
+	animation-name: movement-right, movement-bottom;
+	animation-direction: alternate;
+	
+
+
+
+}
+
+#stage {
+	background-image: url("image/css_animation_exercise_4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.excercise1{
+}
+
+@keyframes movement-right{
+	0%   { left: 10px}
+	100% { left: 500px;}
+
+}
+
+@keyframes  movement-bottom{
+	0% {}
+	100% {: 100px  }
+}
