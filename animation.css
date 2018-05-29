@@ -1,43 +1,83 @@
 body {
-	background-image: url("image/css_animation_exercise_4.png");
-	background-repeat: no-repeat;
-	
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
 }
 
 #hero {
-	
 	position: relative;
-	width:75px;
-	height:75px;
+	width:73px;
+	height:73px;
 	border: 1px dashed red;
-	top:10px;
-	left:10px;
-	animation-duration: 5s, 2s;
-	animation-name: movement-right, movement-bottom;
-	animation-direction: alternate;
-	
-
-
+	top:20px;
+	left:20px;
+	animation-duration: 17s;
+	animation-name: slideleft;
+	animation-iteration-count: infinite;
 
 }
 
 #stage {
-	background-image: url("image/css_animation_exercise_4.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-
+	background-image: url("image/css_animation_exercise_4.png"); 
+  	background-repeat: no-repeat; 
+	width: 600px;
+	height: 600px;
 }
 
-.excercise1{
+@keyframes slideleft {
+
+0% {
+	left:20px;
+	top:20px;
 }
 
-@keyframes movement-right{
-	0%   { left: 10px}
-	100% { left: 500px;}
-
+30%  {
+  left:500px;
+  top:20px;
 }
 
-@keyframes  movement-bottom{
-	0% {}
-	100% {: 100px  }
+40%  {
+  left:500px;
+  top:200px;
+  transform: rotate(0deg);
 }
+
+45%  {
+  left:270px;
+  top:200px;
+  transform: rotate(45deg);
+}
+
+50%  {
+  left:270px;
+  top:200px;
+  transform: rotate(45deg);
+  border-color: red;
+}
+
+75% {
+  left:20px;
+  top:204px;
+  height: 73px;
+  width: 73px;
+  border-radius: 0%;
+  border-color: #0900BD;
+  transform: rotate(90deg);
+  background: transparent ;
+}
+
+100% {
+  left: 440px;
+  top: 440px;
+  height: 150px;
+  width: 150px;
+  transform: rotate(90deg);
+  border-radius: 91%;
+  border-color: transparent;  
+  background: radial-gradient(rgb(251, 218, 97), rgb(247, 107, 28));
+	}
+}
+
+
